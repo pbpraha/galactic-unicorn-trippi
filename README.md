@@ -1,5 +1,11 @@
 # galactic-unicorn-trippy
-Trippy effects with control over WIFI
+Trippy effects with WIFI control and presets
+
+
+
+https://user-images.githubusercontent.com/4026146/226233938-0212d378-c3eb-4a63-b759-0cc3abc9a344.mov
+
+----------------
 
 Based on this example by Pimoroni\
 https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/examples/galactic_unicorn/numpy/trippy.py
@@ -9,8 +15,9 @@ https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/examples/galacti
 
 
 ## CAUTION!
-This code let's you strobe your Galactic Unicorn.
-Be careful if you or others around you are photosensitive.
+*This code let's you strobe your Galactic Unicorn.*
+
+*Be careful if you or others around you are photosensitive.*
 
 ## Setting Up
 You'll need `WIFI_CONFIG.py` in the root of the Pico. 
