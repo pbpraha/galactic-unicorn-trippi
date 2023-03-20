@@ -1,4 +1,4 @@
-# galactic-unicorn-trippy
+# galactic-unicorn-trippi
 Trippy effects with WIFI control and presets
 
 
