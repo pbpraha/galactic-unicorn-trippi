@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>trippi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 179 115"><path fill-rule="evenodd" d="m179 13-9-1-4 7v-8h-6l6-4V0l3 5 7-1-5 4 8 5Zm-11 9c2 1 2 2 2 3v1l-5 42c0 2-1 3-3 3-1 0-2-1-2-3s2-27 5-44l3-2Zm-31 49c-7 0-10-7-10-9s1-3 2-3l3 1c1 2 2 5 5 5 5 0 10-8 10-23 0-5-2-15-7-15-10 0-19 21-19 50 12 0 20 12 20 24 0 9-4 14-11 14-9 0-15-14-15-31-3 1-5 4-5 6l-2 2c-2 0-3-2-3-3 0-3 4-9 10-11 1-34 11-57 25-57 8 0 12 9 12 21 0 19-7 29-15 29Zm-7 38c4 0 5-3 5-8 0-9-5-19-14-18 0 17 5 26 9 26ZM95 71c-7 0-10-7-10-9s1-3 3-3l2 1c1 2 2 5 5 5 6 0 10-8 10-23 0-5-1-15-7-15-10 0-19 21-19 50 12 0 20 12 20 24 0 9-4 14-10 14-10 0-15-14-15-31-3 1-5 4-6 6l-2 2-2-3c0-3 3-9 10-11 0-34 10-57 24-57 8 0 13 9 13 21 0 19-8 29-16 29Zm-6 38c3 0 5-3 5-8 0-9-6-19-15-18 0 17 5 26 10 26ZM67 12l-3 7v-8h-6l6-4-1-7 4 5 6-1-4 4 7 5-9-1Zm-1 10 2 3v1c-2 10-5 29-5 42l-3 3c-2 0-3-1-3-3s2-27 6-44c0-1 1-2 3-2Zm-14 5c-13 1-15 18-18 36v5l-3 2c-2 0-3-1-3-3l4-29c0-6-1-8-3-10l-1-2c0-2 2-4 3-4 2 0 6 5 5 12 3-9 10-13 16-13 1 0 3 1 3 3s-2 3-3 3Zm-29 0h-8c-2 9-4 18-4 25 0 12 4 12 5 13l3 2c0 2-2 4-3 4h-1c-6-2-9-7-9-18l3-26-6 1c-1 0-2-1-2-3 0-4 5-4 9-4a721 721 0 0 1 6-19c2 0 3 1 3 3v1l-3 15 7 1c1 0 3 1 3 3 0 1-1 2-3 2Z"/></svg>
+        <table>
+            <tr>
+                <td>PRESET</td>
+                <td colspan="2">
+                    <select id="PRESETS"/>
+                </td>
+            </tr>
+            <tr>
+                <td>BRIGHTNESS</td>
+                <td>
+                    <input
+                        type="range"
+                        min="0"
+                        max="1"
+                        step="0.01"
+                        value="0"
+                        id="BRIGHTNESS"
+                    />
+                </td>
+                <td id="BRIGHTNESS_VALUE"></td>
+            </tr>
+        </table>
+        <details open>
+            <summary tabindex="-1">DYNAMICS</summary>
+            <table>
+                <tr>
+                    <td>Intensity</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="1"
+                            max="200"
+                            step="1"
+                            value="1"
+                            id="INTENSITY"
+                        />
+                    </td>
+                    <td id="INTENSITY_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Damping</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="0"
+                            id="DAMPING_FACTOR"
+                        />
+                    </td>
+                    <td id="DAMPING_FACTOR_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Strobe</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="0"
+                            id="STROBE"
+                        />
+                    </td>
+                    <td id="STROBE_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Speed</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="1"
+                            max="20"
+                            value="0"
+                            id="SPEED"
+                        />
+                    </td>
+                    <td id="SPEED_VALUE"></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary tabindex="-1">PALETTE</summary>
+            <table>
+                <tr>
+                    <td>Offset</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="0"
+                            id="PALETTE_OFFSET"
+                        />
+                    </td>
+                    <td id="PALETTE_OFFSET_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Size</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="2"
+                            max="64"
+                            step="1"
+                            value="2"
+                            id="PALETTE_SIZE"
+                        />
+                    </td>
+                    <td id="PALETTE_SIZE_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Range</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.01"
+                            value="0"
+                            id="PALETTE_RANGE"
+                        />
+                    </td>
+                    <td id="PALETTE_RANGE_VALUE"></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary tabindex="-1">DOTS</summary>
+            <table>
+                <tr>
+                    <td>Width</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="0"
+                            max="2"
+                            step="0.05"
+                            value="0"
+                            id="DOT_WIDTH"
+                        />
+                    </td>
+                    <td id="DOT_WIDTH_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Height</td>
+                    <td>
+                        <input
+                            type="range"
+                            min="0"
+                            max="2"
+                            step="0.05"
+                            value="0"
+                            id="DOT_HEIGHT"
+                        />
+                    </td>
+                    <td id="DOT_HEIGHT_VALUE"></td>
+                </tr>
+                <tr>
+                    <td>Drift</td>
+                    <td style="display: flex; align-items: center; grid-gap: 10px">
+                        <select id="DRIFT">
+                            <option value="[0,0]">None</option>
+                            <option disabled>──────────</option>
+                            <option value="[-1,0]">Up</option>
+                            <option value="[1,0]">Down</option>
+                            <option value="[-1,1]">Left</option>
+                            <option value="[1,1]">Right</option>
+                        </select>
+                        <input
+                            type="range"
+                            min="0"
+                            max="1"
+                            step="0.05"
+                            value="0"
+                            id="DRIFT_SPEED"
+                        />
+                    </td>
+                    <td id="DRIFT_SPEED_VALUE"></td>
+                </tr>
+            </table>
+        </details>
+
+        <details open>
+            <summary tabindex="-1">TEXT</summary>
+            <input
+                type="text"
+                value=""
+                id="TEXT"
+            />
+        </details>
+
+        <button id="BTN_SAVE" type="button">Save</button>
+        <button id="BTN_SAVE_AS" type="button">Save As</button>
+    </div>
+    <div id="offline">
+        <p>offline</p>
+    </div>
+    <script type="text/javascript" src="static/main.js"></script>
+</body>
+</html>

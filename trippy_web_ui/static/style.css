@@ -1,0 +1,220 @@
+:root {
+  --logo:#d4548b;
+  --button:#62359a;
+  --range-start: #1f0ea1;
+  --range-end: #c16b8e;
+  --range-thumb: #c16b8e;
+  --range-highlight: darkseagreen;
+  --range-thumb-highlight: darkseagreen;
+  --select-border: darkseagreen;
+  --select-focus: darkseagreen;
+  --select-arrow: var(--select-border);
+  --text: #aaa;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,body{
+  font-family:Helvetica,Arial,sans-serif;
+  background: #222;
+  color:var(--text);
+  bottom:0;
+  touch-action: pan-x pan-y;
+  user-select: none;
+}
+body{
+  padding: 0.5em 0.5em 3em 0.5em;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+#app{
+  margin-left: auto;
+  margin-right: auto;
+  width: 340px;
+}
+#offline{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff3;
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#offline p{
+  background: #fff6;
+  color: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 190px;
+  height: 150px;
+  border-radius: 0.5em;
+  font-size: xx-large;
+  box-shadow: 0 10px 20px 20px #0003;
+}
+body.online{
+  overflow: auto;
+}
+body.online #offline{
+  display: none
+}
+
+table{width:100%;}
+
+td{font-size:smaller;padding:.25em .5em}
+td:first-child{width: 80px;}
+td:last-child{width: 40px; text-align: right}
+
+svg{
+  width: 160px;
+  margin: 2.5em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  fill: var(--logo);
+}
+
+details{
+  margin:.75em 0;
+  padding:.5em;
+  border-radius: 1em;
+  background: #2a2a2a
+}
+
+summary{
+  list-style: none ;
+  cursor: pointer;
+  padding: 0.35em 0.5em;
+  font-size: smaller;
+  font-weight: bold;
+  color:var(--range-thumb);
+}
+
+details > summary::marker {
+  -webkit-appearance: none;
+  display:none !important;
+}
+
+select, input[type="text"]
+{
+  box-shadow: 0 0 3px 0px var(--text);
+}
+
+input[type='text']{
+  background-color: #222;
+  border:none;
+  border-radius: 0.5em;
+  color:var(--text);
+  font-size: larger;
+  padding: 0.5em 1em 0.5em 1em;
+  text-transform: uppercase;
+  margin-top:0.5em;
+  width:100%
+}
+
+input[type='range'] {
+  display:block;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 29px;
+  background: transparent;
+  cursor: pointer;
+  margin: 0
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 3px;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--range-start) 0%, var(--range-end) 100%);
+}
+input[type='range']::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  padding: 0;
+  width: 27px;
+  height: 27px;
+  margin-top: -12px;
+  border-radius: 999px;
+  border:2px solid var(--range-thumb);
+  background: #222;
+}
+input[type=range]:focus::-webkit-slider-thumb {background: var(--range-thumb)}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 3px;
+  border-radius: 0.125em;
+  background: linear-gradient(90deg, var(--range-start) 0%, var(--range-end) 100%);
+}
+input[type="range"]::-moz-range-thumb{
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  border-radius: 999px;
+  border:2px solid var(--range-thumb);
+  background: #222;
+}
+input[type=range]:focus::-moz-range-thumb {background: var(--range-thumb)}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 0.5em 1em 0.5em 1em;
+  border-radius: 999px;
+  margin: .25em 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 2px solid var(--select-focus);
+  border-radius: inherit;
+}
+
+button{
+  background: var(--button);
+  border-radius: 99px;
+  border-style: none;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: block;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 0.75em 0;
+  padding: .75em 1.5em;
+  width:100%;
+  touch-action: manipulation;
+}
+
+/*button:hover,*/
+button:active {
+  background-color: #F082AC;
+}
+
+summary:focus-visible,
+input:focus-visible,
+select,
+button{outline:none;}
