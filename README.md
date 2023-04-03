@@ -33,5 +33,6 @@ Open that URL in your browser and start tripping!
 ![image](https://user-images.githubusercontent.com/4026146/226232542-d60a634b-2e69-415b-9519-3ceab17fea5b.png)
 
 ## Note:
-If you are using Firefox you may not be able to connect to the GU as Firefox insists on tryng to connect via **https**.
+If you are using Firefox you may not be able to connect to the GU as Firefox insists on trying to connect via **https**.
+
 If you have a similar problem then I suggest trying a different browser, e.g. Chrome
