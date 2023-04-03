@@ -31,3 +31,7 @@ Run `trippy_web_ui.py` through Thonny and it should get connected and give you a
 Open that URL in your browser and start tripping!
 
 ![image](https://user-images.githubusercontent.com/4026146/226232542-d60a634b-2e69-415b-9519-3ceab17fea5b.png)
+
+## Note:
+If you are using Firefox you may not be able to connect to the GU as Firefox insists on tryng to connect via **https**.
+If you have a similar problem then I suggest trying a different browser, e.g. Chrome
