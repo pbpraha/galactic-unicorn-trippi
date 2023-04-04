@@ -64,7 +64,7 @@ def route_index(request):
 def route_index(request):
     return PRESETS
 
-@server.route('/tripppppy')
+@server.route('/trippi')
 @with_websocket
 async def echo(request, ws):
     global VALUES, CURRENT_FILE, PRESETS, trippy
